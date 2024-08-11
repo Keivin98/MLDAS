@@ -14,14 +14,14 @@
       <div class="col-lg-6 venue-info">
         <div class="row justify-content-center">
           <div class="col-11 col-lg-8">
-            <h3>{{ $venue->name }}</h3>
+            <h3>{!! $venue->name !!}</h3>
             <p>{{ $venue->description }}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid venue-gallery-container">
+    <!-- <div class="container-fluid venue-gallery-container">
       <div class="row no-gutters">
         @if($venue->photos)
           @foreach($venue->photos as $photo)
@@ -35,6 +35,6 @@
           @endforeach
         @endif
       </div>
-    </div>
+    </div> -->
   @endforeach
 </section>

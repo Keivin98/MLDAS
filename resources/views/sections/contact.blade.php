@@ -4,7 +4,7 @@
 
     <div class="section-header">
       <h2>Contact Us</h2>
-      <p>Nihil officia ut sint molestiae tenetur.</p>
+      <!-- <p>Nihil officia ut sint molestiae tenetur.</p> -->
     </div>
 
     <div class="row contact-info">
@@ -35,7 +35,7 @@
 
     </div>
 
-    <div class="form">
+    <!-- <div class="form">
       <div id="sendmessage">Your message has been sent. Thank you!</div>
       <div id="errormessage"></div>
       <form action="" method="post" role="form" class="contactForm">
@@ -58,7 +58,7 @@
           <div class="validation"></div>
         </div>
         <div class="text-center"><button type="submit">Send Message</button></div>
-      </form>
+      </form> -->
     </div>
 
   </div>
