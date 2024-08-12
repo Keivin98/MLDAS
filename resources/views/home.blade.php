@@ -11,12 +11,16 @@
   @include('sections.schedule')
 
   @include('sections.venues')
+  
+  @include('sections.sponsors')
+  
+  @include('sections.contact')
 
   <!-- @include('sections.hotels') -->
 
   <!-- @include('sections.gallery') -->
 
-  @include('sections.sponsors')
+  
 
   <!-- @include('sections.faq') -->
 
@@ -24,6 +28,6 @@
 
   <!-- @include('sections.buy_ticket') -->
 
-  @include('sections.contact')
+  
 </main>
 @endsection

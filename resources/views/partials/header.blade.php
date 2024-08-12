@@ -4,8 +4,9 @@
     <div id="logo" class="pull-left">
       <h1>
         <a href="{{ route('home') }}#intro">
-          <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-          {{ env('APP_NAME', 'The Event') }}
+          <!-- <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+          {{ env('APP_NAME', 'The Event') }} -->
+          <img src="/img/logo.png" alt="MLDAS" >
         </a>
       </h1>
     </div>
