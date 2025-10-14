@@ -2,7 +2,7 @@
 
   <div class="container">
     <div class="section-header">
-      <h2>Organizers</h2>
+      <h2>Sponsors</h2>
     </div>
 
     <div class="row no-gutters supporters-wrap clearfix">

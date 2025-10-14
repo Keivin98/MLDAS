@@ -520,6 +520,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #f82249;
 }
 
+#intro h2 span {
+    color: #bc1937;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 #intro p {
     color: #ebebeb;
     font-weight: 700;
