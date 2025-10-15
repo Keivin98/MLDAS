@@ -84,6 +84,16 @@
                         </a>
                     </li>
                 @endcan
+                <li class="nav-item">
+                    <a href="{{ route("admin.mldas-series.index") }}" class="nav-link {{ request()->is('admin/mldas-series') || request()->is('admin/mldas-series/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-calendar-alt">
+
+                        </i>
+                        <p>
+                            <span>MLDAS Series</span>
+                        </p>
+                    </a>
+                </li>
                 @can('speaker_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.speakers.index") }}" class="nav-link {{ request()->is('admin/speakers') || request()->is('admin/speakers/*') ? 'active' : '' }}">

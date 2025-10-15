@@ -23,6 +23,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('settings/destroy', 'SettingsController@massDestroy')->name('settings.massDestroy');
     Route::resource('settings', 'SettingsController');
 
+    // MLDAS Series
+    Route::resource('mldas-series', 'MldasSeriesController');
+
     // Speakers
     Route::delete('speakers/destroy', 'SpeakersController@massDestroy')->name('speakers.massDestroy');
     Route::post('speakers/media', 'SpeakersController@storeMedia')->name('speakers.storeMedia');

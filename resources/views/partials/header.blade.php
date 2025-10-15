@@ -22,6 +22,16 @@
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#gallery">Gallery</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#supporters">Sponsors</a></li> -->
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#contact">Contact</a></li>
+        <li class="menu-has-children"><a href="#">MLDAS Series</a>
+          <ul>
+            @php
+              $mldasSeries = \App\MldasSeries::active()->ordered()->get();
+            @endphp
+            @foreach($mldasSeries as $series)
+              <li><a href="{{ $series->url }}" target="_blank">{{ $series->title }}</a></li>
+            @endforeach
+          </ul>
+        </li>
         <!-- <li class="buy-tickets"><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#buy-tickets">Buy Tickets</a></li> -->
       </ul>
     </nav>
