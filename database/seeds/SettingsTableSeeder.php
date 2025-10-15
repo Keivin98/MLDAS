@@ -33,6 +33,10 @@ class SettingsTableSeeder extends Seeder
                 'value' => 'Monday to Wednesday<br>10-12 December'
             ],
             [
+                'key'   => 'call_for_participation_url',
+                'value' => 'https://example.com/call-for-participation'
+            ],
+            [
                 'key'   => 'contact_address',
                 'value' => 'A108 Adam Street, NY 535022, USA'
             ],

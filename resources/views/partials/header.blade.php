@@ -32,6 +32,7 @@
             @endforeach
           </ul>
         </li>
+        <li><a href="{{ $settings['call_for_participation_url'] ?? '#' }}" target="_blank">Call for Participation</a></li>
         <!-- <li class="buy-tickets"><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#buy-tickets">Buy Tickets</a></li> -->
       </ul>
     </nav>
