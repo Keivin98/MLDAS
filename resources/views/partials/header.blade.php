@@ -17,22 +17,22 @@
         <!-- <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#about">About</a></li> -->
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#speakers">Speakers</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#schedule">Schedule</a></li>
-        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#venue">Venue</a></li>
         <!-- <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#hotels">Hotels</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#gallery">Gallery</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#supporters">Sponsors</a></li> -->
         <!-- <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#contact">Contact</a></li> -->
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#call-for-participation">Call for Participation</a></li>
         <li class="menu-has-children"><a href="#">MLDAS Series</a>
-          <ul>
-            @php
-              $mldasSeries = \App\MldasSeries::active()->ordered()->get();
-            @endphp
-            @foreach($mldasSeries as $series)
-              <li><a href="{{ $series->url }}" target="_blank">{{ $series->title }}</a></li>
-            @endforeach
-          </ul>
-        </li>
-        <li><a href="{{ $settings['call_for_participation_url'] ?? '#' }}" target="_blank">Call for Participation</a></li>
+        <ul>
+          @php
+          $mldasSeries = \App\MldasSeries::active()->ordered()->get();
+          @endphp
+          @foreach($mldasSeries as $series)
+          <li><a href="{{ $series->url }}" target="_blank">{{ $series->title }}</a></li>
+          @endforeach
+        </ul>
+      </li>
+      <!-- <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#venue">Venue</a></li> -->
         <!-- <li class="buy-tickets"><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#buy-tickets">Buy Tickets</a></li> -->
       </ul>
     </nav>

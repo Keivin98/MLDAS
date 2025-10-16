@@ -118,18 +118,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('venue_access')
-                    <li class="nav-item">
-                        <a href="{{ route("admin.venues.index") }}" class="nav-link {{ request()->is('admin/venues') || request()->is('admin/venues/*') ? 'active' : '' }}">
-                            <i class="fa-fw fas fa-map-marker-alt">
-
-                            </i>
-                            <p>
-                                <span>{{ trans('cruds.venue.title') }}</span>
-                            </p>
-                        </a>
-                    </li>
-                @endcan
+                
                 @can('hotel_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.hotels.index") }}" class="nav-link {{ request()->is('admin/hotels') || request()->is('admin/hotels/*') ? 'active' : '' }}">
@@ -198,6 +187,18 @@
                             </i>
                             <p>
                                 <span>{{ trans('cruds.price.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('venue_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.venues.index") }}" class="nav-link {{ request()->is('admin/venues') || request()->is('admin/venues/*') ? 'active' : '' }}">
+                            <i class="fa-fw fas fa-map-marker-alt">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('cruds.venue.title') }}</span>
                             </p>
                         </a>
                     </li>

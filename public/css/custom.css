@@ -70,3 +70,34 @@ table.dataTable thead .sorting_desc {
     padding-left: 0px;
     padding-right: 0px;
 }
+
+/* Call for Participation Submit Button */
+.submit-btn {
+    background: #0e1b4d;
+    border: 0;
+    padding: 12px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #0a1538;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(14, 27, 77, 0.3);
+}
+
+.submit-btn i {
+    margin-right: 8px;
+}
+
+/* Call for Participation Section */
+#call-for-participation {
+    padding: 60px 0;
+}

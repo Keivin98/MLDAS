@@ -8,9 +8,12 @@
 
   @include('sections.schedule')
 
-  @include('sections.venues')
   
   @include('sections.sponsors')
+  
+  @include('sections.call-for-participation')
+  
+  @include('sections.venues')
   
   @include('sections.contact')
 

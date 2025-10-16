@@ -20,6 +20,9 @@
 
   <!-- Main Stylesheet File -->
   <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  
+  <!-- Custom Stylesheet File -->
+  <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 
 <body>
