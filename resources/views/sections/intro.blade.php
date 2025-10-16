@@ -4,9 +4,9 @@
     <p class="mb-4 pb-0">{{ $settings['subtitle'] ?? '' }}</p>
     @if($settings['youtube_link'])
       <!-- <a href= class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a> -->
+        data-autoplay="true"></a> 
         <a class="" data-autoplay="true" data-vbtype="video" data-ratio="1x1" data-maxwidth="400px" href="{{ $settings['youtube_link'] }}" target="_" >Recap of MLDAS 23</a>
-    @endif
+    --> @endif
     <div class="about-content mt-5" style="background: rgba(255, 255, 255, 0.45); padding: 30px; border-radius: 8px; text-align: left;">
       <div class="row">
         <div class="col-lg-6">
