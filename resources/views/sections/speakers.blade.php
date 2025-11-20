@@ -34,7 +34,7 @@
           $mldasSeries = \App\MldasSeries::active()->ordered()->get();
           @endphp
           @foreach($mldasSeries as $series)
-          <li style="display: inline;"><a href="{{ $series->url }}#speaker0" style="text-decoration: underline;" target="_blank">{{ trim(str_replace('MLDAS', '', $series->title)) }} </a></li>
+          @if($series->url != 'https://mldas.qcri.org/#') <li style="display: inline;"><a href="{{ $series->url }}#speaker0" style="text-decoration: underline;" target="_blank">{{ trim(str_replace('MLDAS', '', $series->title)) }} </a></li>@endif
           @endforeach
         </ul>
     </div>

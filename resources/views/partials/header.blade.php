@@ -28,7 +28,7 @@
           $mldasSeries = \App\MldasSeries::active()->ordered()->get();
           @endphp
           @foreach($mldasSeries as $series)
-          <li><a href="{{ $series->url }}" target="_blank">{{ $series->title }}</a></li>
+          <li>@if($series->url == 'https://mldas.qcri.org/#')<span style="display: block; padding: 10px; color: #060c22; font-size: 13px; text-transform: none; border-radius: 3px; cursor: default;">{{ $series->title }}</span>@else<a href="{{ $series->url }}" target="_blank">{{ $series->title }}</a>@endif</li>
           @endforeach
         </ul>
       </li>
