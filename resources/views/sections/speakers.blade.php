@@ -2,7 +2,7 @@
   <div class="container">
     <div class="section-header text-center">
       <h2>Speakers</h2>
-      <p>Here is the list of our speakers, explore their bios</p>
+      <p>Confirmed Speakers for MLDAS 2026</p>
     </div>
 
     <div class="row">
@@ -26,6 +26,17 @@
           </div>
         </div>
       @endif
+    </div>
+    <div>
+    <p>Speakers from Prior Editions</p>
+      <ul style="list-style: none; padding: 0; display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+          @php
+          $mldasSeries = \App\MldasSeries::active()->ordered()->get();
+          @endphp
+          @foreach($mldasSeries as $series)
+          <li style="display: inline;"><a href="{{ $series->url }}#speaker0" target="_blank">{{ $series->title }}</a></li>
+          @endforeach
+        </ul>
     </div>
   </div>
 </section>
