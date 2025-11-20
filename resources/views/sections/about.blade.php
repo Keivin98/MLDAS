@@ -1,7 +1,7 @@
 <section id="about">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5">
+      <div class="col-lg-12 ml-10">
         <h2>About The Symposium</h2>
         <p>{!! $settings['about_description'] ?? '' !!}</p>
       </div>
