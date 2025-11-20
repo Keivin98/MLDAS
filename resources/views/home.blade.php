@@ -4,6 +4,8 @@
 @include('sections.intro')
 
 <main id="main">
+  @include('sections.organizers')
+
   @include('sections.speakers')
 
   @include('sections.schedule')
