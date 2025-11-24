@@ -149,9 +149,6 @@ table.dataTable thead .sorting_desc {
     }
     
     #intro {
-        overflow-y: auto;
-        min-height: 100vh;
-        height: auto;
         position: relative;
     }
     
@@ -163,11 +160,6 @@ table.dataTable thead .sorting_desc {
         right: 0;
         bottom: 0;
         z-index: 1;
-    }
-    
-    /* Make intro-container determine the full height so overlay stretches with it */
-    #intro .intro-container {
-        min-height: 100%;
     }
     
     /* Ensure content appears above overlay */
