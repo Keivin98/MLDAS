@@ -126,6 +126,7 @@ table.dataTable thead .sorting_desc {
     min-height: 100vh;
     height: auto;
     overflow: visible;
+    padding-bottom: 100px;   
 }
 
 #intro .intro-container {
@@ -141,16 +142,28 @@ table.dataTable thead .sorting_desc {
     margin-right: auto !important;
 }
 
-/* Responsive margins for about-content */
+/* Responsive margins for about-content - wider on zoom/smaller screens */
 @media (max-width: 1400px) {
     .about-content {
         max-width: calc(100% - 10rem);
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
+    .about-content {
+        max-width: calc(100% - 6rem);
+    }
+}
+
+@media (max-width: 1000px) {
     .about-content {
         max-width: calc(100% - 4rem);
+    }
+}
+
+@media (max-width: 991px) {
+    .about-content {
+        max-width: calc(100% - 2rem);
         padding: 20px !important;
     }
     
@@ -214,7 +227,7 @@ table.dataTable thead .sorting_desc {
 
 @media (max-width: 768px) {
     .about-content {
-        max-width: calc(100% - 2rem);
+        max-width: calc(100% - 1rem);
         padding: 15px !important;
     }
     
@@ -283,7 +296,7 @@ table.dataTable thead .sorting_desc {
 
 @media (max-width: 576px) {
     .about-content {
-        max-width: calc(100% - 1rem);
+        max-width: calc(100% - 0.5rem);
         padding: 12px !important;
     }
     
@@ -347,5 +360,15 @@ table.dataTable thead .sorting_desc {
     .intro-header {
         text-align: center !important;
         width: 100%;
+    }
+}
+
+/* Extra wide for high zoom levels (very small effective viewport) */
+@media (max-width: 400px) {
+    .about-content {
+        max-width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 10px !important;
     }
 }
