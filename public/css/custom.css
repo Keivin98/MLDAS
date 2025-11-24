@@ -102,6 +102,38 @@ table.dataTable thead .sorting_desc {
     padding: 60px 0;
 }
 
+/* Organizers Section - Add spacing between columns on mobile */
+@media (max-width: 991px) {
+    #organizers .row > div:first-child {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    #organizers .row > div:first-child {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    #organizers .row > div:first-child {
+        margin-bottom: 20px;
+    }
+}
+
+/* Intro Section - Make flexible for zoom */
+#intro {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+}
+
+#intro .intro-container {
+    position: relative;
+    min-height: calc(100vh - 90px);
+    padding: 20px 15px;
+}
+
 /* Intro Section - Responsive About Content */
 .about-content {
     max-width: calc(100% - 20rem);
@@ -150,6 +182,16 @@ table.dataTable thead .sorting_desc {
     
     #intro {
         position: relative;
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
+    }
+    
+    #intro .intro-container {
+        position: relative;
+        z-index: 2;
+        min-height: calc(100vh - 90px);
+        padding: 20px 15px;
     }
     
     /* Ensure overlay covers full height - make it stretch to match intro-container height */
@@ -160,12 +202,7 @@ table.dataTable thead .sorting_desc {
         right: 0;
         bottom: 0;
         z-index: 1;
-    }
-    
-    /* Ensure content appears above overlay */
-    #intro .intro-container {
-        position: relative;
-        z-index: 2;
+        min-height: 100%;
     }
     
     /* Keep header elements centered */
@@ -223,12 +260,12 @@ table.dataTable thead .sorting_desc {
         right: 0;
         bottom: 0;
         z-index: 1;
-        height: 100%;
+        min-height: 100%;
     }
     
     /* Make intro-container determine the full height */
     #intro .intro-container {
-        min-height: 100%;
+        min-height: calc(100vh - 70px);
         position: relative;
         z-index: 2;
         padding-bottom: 30px;
@@ -292,12 +329,12 @@ table.dataTable thead .sorting_desc {
         right: 0;
         bottom: 0;
         z-index: 1;
-        height: 100%;
+        min-height: 100%;
     }
     
     /* Make intro-container determine the full height */
     #intro .intro-container {
-        min-height: 100%;
+        min-height: calc(100vh - 70px);
         position: relative;
         z-index: 2;
         padding-bottom: 20px;
