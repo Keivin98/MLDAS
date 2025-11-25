@@ -1,36 +1,33 @@
-@extends('layouts.main')
+@extends( 'layouts.main' )
 
-@section('content')
-@include('sections.intro')
+@section( 'content' )
+  @include( 'sections.intro' )
 
-<main id="main">
-  @include('sections.organizers')
+  <main id="main">
+    @include( 'sections.organizers' )
 
-  @include('sections.speakers')
+    @include( 'sections.speakers' )
 
-  @include('sections.schedule')
+    @include( 'sections.schedule' )
 
-  
-  @include('sections.sponsors')
-  
-  @include('sections.call-for-participation')
-  
-  @include('sections.venues')
-  
-  @include('sections.contact')
 
-  <!-- @include('sections.hotels') -->
+    @include( 'sections.sponsors' )
 
-  <!-- @include('sections.gallery') -->
+    @include( 'sections.call-for-participation' )
 
-  
+    @include( 'sections.venues' )
 
-  <!-- @include('sections.faq') -->
+    @include( 'sections.contact' )
 
-  <!-- @include('sections.subscribe') -->
-
-  <!-- @include('sections.buy_ticket') -->
-
-  
-</main>
+  </main>
 @endsection
+
+<!-- @include('sections.hotels') -->
+
+    <!-- @include('sections.gallery') -->
+
+    <!-- @include('sections.faq') -->
+
+    <!-- @include('sections.subscribe') -->
+
+    <!-- @include('sections.buy_ticket') -->
