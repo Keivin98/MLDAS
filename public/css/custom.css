@@ -126,13 +126,12 @@ table.dataTable thead .sorting_desc {
     min-height: 100vh;
     height: auto;
     overflow: visible;
-    padding-bottom: 100px;   
 }
 
 #intro .intro-container {
     position: relative;
     min-height: calc(100vh - 90px);
-    padding: 20px 15px;
+    padding: 20px 15px 100px 15px;
 }
 
 /* Intro Section - Responsive About Content */
