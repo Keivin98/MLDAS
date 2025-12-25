@@ -71,6 +71,43 @@ table.dataTable thead .sorting_desc {
     padding-right: 0px;
 }
 
+/* Schedule - expandable talk abstract (subtitle) */
+#schedule .schedule-subtitle__text {
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    /* Clamp to 2 lines (WebKit) */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    /* Fallback clamp for other browsers */
+    max-height: calc(1.4em * 2);
+    overflow: hidden;
+    margin-bottom: 6px; /* override theme p spacing inside schedule items */
+}
+
+#schedule .schedule-subtitle__text.is-expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    max-height: none;
+    overflow: visible;
+}
+
+#schedule .schedule-subtitle__toggle {
+    display: none; /* JS will show only when subtitle truly overflows 2 lines */
+    line-height: 1;
+    text-decoration: underline;
+    font-size: 0.95em;
+}
+
+@media (max-width: 576px) {
+    #schedule .schedule-subtitle__text {
+        margin-bottom: 4px;
+    }
+}
+
 /* Call for Participation Submit Button */
 .submit-btn {
     background: #0e1b4d;

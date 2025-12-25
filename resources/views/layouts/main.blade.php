@@ -19,10 +19,10 @@
   <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}?v={{ @filemtime(public_path('css/style.css')) }}" rel="stylesheet">
   
   <!-- Custom Stylesheet File -->
-  <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/custom.css') }}?v={{ @filemtime(public_path('css/custom.css')) }}" rel="stylesheet">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
   <script src="{{ asset('js/contactform.js') }}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/app.js') }}?v={{ @filemtime(public_path('js/app.js')) }}"></script>
   @yield('scripts')
 </body>
 

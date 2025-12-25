@@ -27,7 +27,17 @@
                     </div>
                   @endif
                   <h4>{{ $schedule->title }} @if($schedule->speaker)<span>{{ $schedule->speaker->name }}</span>@endif</h4>
-                  <p>{{ $schedule->subtitle }}</p>
+                  @php($subtitle = trim((string)($schedule->subtitle ?? '')))
+                  @if($subtitle !== '')
+                    <div class="schedule-subtitle js-schedule-subtitle">
+                      <p class="schedule-subtitle__text js-schedule-subtitle-text">{{ $subtitle }}</p>
+                      <button type="button"
+                              class="schedule-subtitle__toggle btn btn-link p-0 js-schedule-subtitle-toggle"
+                              aria-expanded="false">
+                        More
+                      </button>
+                    </div>
+                  @endif
                 </div>
               </div>
             @endforeach
