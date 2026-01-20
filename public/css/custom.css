@@ -80,17 +80,44 @@ table.dataTable thead .sorting_desc {
     /* Clamp to 2 lines (WebKit) */
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
 
     /* Fallback clamp for other browsers */
-    max-height: calc(1.4em * 2);
+    max-height: calc(1.4em * 4);
     overflow: hidden;
     margin-bottom: 6px; /* override theme p spacing inside schedule items */
+}
+
+#schedule .schedule-session {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    border-bottom: none;
+    background-color: #d7dceb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#schedule .schedule-session__title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0e1b4d;
+    text-align: center;
+}
+
+#schedule .schedule-session__chair {
+    margin-top: 4px;
+    font-size: 0.95rem;
+    color: #666;
+    text-align: center;
 }
 
 #schedule .schedule-subtitle__text.is-expanded {
     display: block;
     -webkit-line-clamp: unset;
+    line-clamp: unset;
     max-height: none;
     overflow: visible;
 }

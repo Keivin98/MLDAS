@@ -21,7 +21,7 @@
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#gallery">Gallery</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#supporters">Sponsors</a></li> -->
         <!-- <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#contact">Contact</a></li> -->
-        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#call-for-participation">Call for Participation</a></li>
+        <!-- <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#call-for-participation">Call for Participation</a></li> -->
         <li class="menu-has-children"><a href="#">MLDAS Series</a>
         <ul>
           @php

@@ -2,7 +2,6 @@
   <div class="container wow fadeInUp">
     <div class="section-header">
       <h2>Event Schedule</h2>
-      <p>Here is our event schedule</p>
     </div>
 
     @if($schedules->count() > 0)
@@ -17,7 +16,26 @@
       <div class="tab-content row justify-content-center">
         @foreach($schedules as $key => $day)
           <div role="tabpanel" class="col-lg-9 tab-pane fade{{ $key === 1 ? ' show active' : '' }}" id="day-{{ $key }}">
+            @php($prevSessionNumber = null)
             @foreach($day as $schedule)
+              @php($sessionNumber = $schedule->session_number ?? null)
+              @php($sessionName = trim((string)($schedule->session_name ?? '')))
+              @php($sessionChair = trim((string)($schedule->session_chair ?? '')))
+
+              @if($sessionNumber !== null && $sessionNumber !== $prevSessionNumber)
+                <div class="row schedule-item schedule-session">
+                  <div class="col-md-12">
+                    <h5 class="schedule-session__title">
+                      Session {{ $sessionNumber }}@if($sessionName !== ''): {{ $sessionName }}@endif
+                    </h5>
+                    @if($sessionChair !== '')
+                      <div class="schedule-session__chair">Chair: {{ $sessionChair }}</div>
+                    @endif
+                  </div>
+                </div>
+              @endif
+              @php($prevSessionNumber = $sessionNumber)
+
               <div class="row schedule-item">
                 <div class="col-md-2"><time>{{ \Carbon\Carbon::parse($schedule->start_time)->format("h:i A") }}</time></div>
                 <div class="col-md-10">
@@ -26,11 +44,12 @@
                       <img src="{{ $schedule->speaker->photo->getUrl() }}" alt="{{ $schedule->speaker->name }}">
                     </div>
                   @endif
-                  <h4>{{ $schedule->title }} @if($schedule->speaker)<span>{{ $schedule->speaker->name }}</span>@endif</h4>
+                  <h4>{{ $schedule->title }}</h4>
+                  <h4> @if($schedule->speaker)<span>{{ $schedule->speaker->name }}</span>@endif</h4>
                   @php($subtitle = trim((string)($schedule->subtitle ?? '')))
                   @if($subtitle !== '')
                     <div class="schedule-subtitle js-schedule-subtitle">
-                      <p class="schedule-subtitle__text js-schedule-subtitle-text">{{ $subtitle }}</p>
+                      <div class="schedule-subtitle__text js-schedule-subtitle-text">{!! $subtitle !!}</div>
                       <button type="button"
                               class="schedule-subtitle__toggle btn btn-link p-0 js-schedule-subtitle-toggle"
                               aria-expanded="false">

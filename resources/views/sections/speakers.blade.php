@@ -2,8 +2,7 @@
          class="wow fadeInUp">
   <div class="container">
     <div class="section-header text-center">
-      <h2>Speakers</h2>
-      <p>Confirmed Speakers for MLDAS 2026</p>
+      <h2>Keynote Speakers</h2>
     </div>
 
     @if($speakers->count() > 0)

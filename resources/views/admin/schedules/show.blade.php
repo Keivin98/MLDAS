@@ -28,6 +28,30 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.schedule.fields.session_number') }}
+                        </th>
+                        <td>
+                            {{ $schedule->session_number ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.schedule.fields.session_name') }}
+                        </th>
+                        <td>
+                            {{ $schedule->session_name ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.schedule.fields.session_chair') }}
+                        </th>
+                        <td>
+                            {{ $schedule->session_chair ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.schedule.fields.start_time') }}
                         </th>
                         <td>
@@ -47,7 +71,7 @@
                             {{ trans('cruds.schedule.fields.subtitle') }}
                         </th>
                         <td>
-                            {{ $schedule->subtitle }}
+                            {!! $schedule->subtitle !!}
                         </td>
                     </tr>
                     <tr>

@@ -21,6 +21,42 @@
                     {{ trans('cruds.schedule.fields.day_number_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('session_number') ? 'has-error' : '' }}">
+                <label for="session_number">{{ trans('cruds.schedule.fields.session_number') }}</label>
+                <input type="number" id="session_number" name="session_number" class="form-control" value="{{ old('session_number', isset($schedule) ? $schedule->session_number : '') }}" step="1" min="1">
+                @if($errors->has('session_number'))
+                    <p class="help-block">
+                        {{ $errors->first('session_number') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.schedule.fields.session_number_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('session_name') ? 'has-error' : '' }}">
+                <label for="session_name">{{ trans('cruds.schedule.fields.session_name') }}</label>
+                <input type="text" id="session_name" name="session_name" class="form-control" value="{{ old('session_name', isset($schedule) ? $schedule->session_name : '') }}">
+                @if($errors->has('session_name'))
+                    <p class="help-block">
+                        {{ $errors->first('session_name') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.schedule.fields.session_name_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('session_chair') ? 'has-error' : '' }}">
+                <label for="session_chair">{{ trans('cruds.schedule.fields.session_chair') }}</label>
+                <input type="text" id="session_chair" name="session_chair" class="form-control" value="{{ old('session_chair', isset($schedule) ? $schedule->session_chair : '') }}">
+                @if($errors->has('session_chair'))
+                    <p class="help-block">
+                        {{ $errors->first('session_chair') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('cruds.schedule.fields.session_chair_helper') }}
+                </p>
+            </div>
             <div class="form-group {{ $errors->has('start_time') ? 'has-error' : '' }}">
                 <label for="start_time">{{ trans('cruds.schedule.fields.start_time') }}*</label>
                 <input type="text" id="start_time" name="start_time" class="form-control timepicker" value="{{ old('start_time', isset($schedule) ? $schedule->start_time : '') }}" required>
@@ -47,7 +83,7 @@
             </div>
             <div class="form-group {{ $errors->has('subtitle') ? 'has-error' : '' }}">
                 <label for="subtitle">{{ trans('cruds.schedule.fields.subtitle') }}</label>
-                <input type="text" id="subtitle" name="subtitle" class="form-control" value="{{ old('subtitle', isset($schedule) ? $schedule->subtitle : '') }}">
+                <textarea id="subtitle" name="subtitle" class="form-control ckeditor">{{ old('subtitle', isset($schedule) ? $schedule->subtitle : '') }}</textarea>
                 @if($errors->has('subtitle'))
                     <p class="help-block">
                         {{ $errors->first('subtitle') }}

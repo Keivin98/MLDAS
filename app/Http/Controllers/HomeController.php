@@ -20,7 +20,9 @@ class HomeController extends Controller
         $settings = Setting::pluck('value', 'key');
         $speakers = Speaker::all();
         $schedules = Schedule::with('speaker')
+            ->orderBy('day_number', 'asc')
             ->orderBy('start_time', 'asc')
+            ->orderBy('session_number', 'asc')
             ->get()
             ->groupBy('day_number');
         $venues = Venue::all();

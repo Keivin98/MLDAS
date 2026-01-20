@@ -13,8 +13,6 @@
 
     @include( 'sections.sponsors' )
 
-    @include( 'sections.call-for-participation' )
-
     @include( 'sections.venues' )
 
     @include( 'sections.contact' )

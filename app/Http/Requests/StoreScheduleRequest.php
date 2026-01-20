@@ -25,12 +25,30 @@ class StoreScheduleRequest extends FormRequest
                 'min:-2147483648',
                 'max:2147483647',
             ],
+            'session_number' => [
+                'nullable',
+                'integer',
+                'min:1',
+                'max:2147483647',
+            ],
+            'session_name' => [
+                'nullable',
+                'string',
+            ],
+            'session_chair' => [
+                'nullable',
+                'string',
+            ],
             'start_time' => [
                 'required',
                 'date_format:' . config('panel.time_format'),
             ],
             'title'      => [
                 'required',
+            ],
+            'subtitle'   => [
+                'nullable',
+                'string',
             ],
         ];
     }
